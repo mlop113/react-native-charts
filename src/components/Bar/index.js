@@ -1,7 +1,7 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { Animated, View } from 'react-native';
 import styles from './styles';
-
+import PropTypes from 'prop-types'
 export default class Bar extends Component {
   static propTypes = {
     destinationValueScale: PropTypes.number.isRequired,
@@ -9,7 +9,7 @@ export default class Bar extends Component {
     horizontal: PropTypes.bool,
     initialValueScale: PropTypes.number.isRequired,
     maxValue: PropTypes.number.isRequired,
-    style: View.propTypes.style,
+    style: PropTypes.style,
     value: PropTypes.number.isRequired,
     valueScaleSpringFriction: PropTypes.number.isRequired,
   };

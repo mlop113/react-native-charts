@@ -1,21 +1,21 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { View } from 'react-native';
 import { flatten, max, pluck, zip } from 'underscore';
 import { dataSetPropType } from '../../constants/propTypes';
 import Bar from '../Bar';
 import Grid from '../Grid';
 import styles from './styles';
-
+import PropTypes from 'prop-types'
 export default class BarChart extends Component {
   static propTypes = {
     barSize: PropTypes.number,
     barSpacing: PropTypes.number,
-    barStyle: View.propTypes.style,
+    barStyle: PropTypes.style,
     dataSets: PropTypes.arrayOf(dataSetPropType).isRequired,
     graduation: PropTypes.number,
     horizontal: PropTypes.bool,
     showGrid: PropTypes.bool.isRequired,
-    style: View.propTypes.style,
+    style: PropTypes.style,
   };
 
   static defaultProps = {

@@ -1,7 +1,7 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 import styles from './styles';
-
+import PropTypes from 'prop-types'
 export default class GraduationUnit extends Component {
   static propTypes = {
     completeBorder: PropTypes.bool,
@@ -9,7 +9,7 @@ export default class GraduationUnit extends Component {
     labelColor: PropTypes.string,
     labelWrapperFlex: PropTypes.number,
     lineColor: PropTypes.string,
-    style: View.propTypes.style,
+    style: PropTypes.style,
     unitFlex: PropTypes.number,
     value: PropTypes.number,
   };
